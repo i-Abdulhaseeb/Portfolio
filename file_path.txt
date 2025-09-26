@@ -1,0 +1,53 @@
+portfolio_website/
+│── lib/
+│   │── main.dart                # Entry point of the app
+│   │
+│   ├── core/                    # Core utilities (constants, themes, helpers)
+│   │   ├── app_colors.dart
+│   │   ├── app_text_styles.dart
+│   │   └── responsive.dart      # Responsive layout helper
+│   │
+│   ├── data/                    # Static data (skills, projects, resume, etc.)
+│   │   ├── skills_data.dart
+│   │   ├── projects_data.dart
+│   │   
+│   │
+│   ├── models/                  # Data models
+│   │   ├── skill.dart
+│   │   ├── project.dart
+│   │   
+│   │
+│   ├── widgets/                 # Reusable UI widgets
+│   │   ├── custom_button.dart
+│   │   ├── section_title.dart
+│   │   ├── skill_card.dart
+│   │   ├── project_card.dart
+│   │   └── contact_form.dart
+│   │
+│   ├── sections/                # Different sections of the portfolio
+│   │   ├── header.dart          # Top bar (Home, About, Projects, Contact)
+│   │   ├── hero_section.dart    # Name, role, buttons
+│   │   ├── about_section.dart   # About Me + Image
+│   │   ├── skills_section.dart  # Skills grid
+│   │   ├── projects_section.dart
+│   │   ├── resume_section.dart
+│   │   └── contact_section.dart
+│   │
+│   ├── pages/                   # Full pages
+│   │   └── home_page.dart       # Portfolio main page combining all sections
+│   │
+│   └── config/                  # Configurations
+│       └── app_routes.dart      # If you plan to add multiple pages
+│
+├── assets/                      # Images, icons, resume PDF
+│   ├── images/
+│   │   ├── profile.png
+│   │   ├── project1.png
+│   │   ├── project2.png
+│   │   └── ...
+│   ├── icons/
+│   │   └── skill_icons/
+│   └── docs/
+│       └── resume.pdf
+│
+├── pubspec.yaml                  # Dependencies + assets registration
