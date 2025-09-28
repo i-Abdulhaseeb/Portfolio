@@ -45,7 +45,6 @@ class _AboutSectionState extends State<AboutSection> {
                 Text(
                   "About Me",
                   style: GoogleFonts.montserrat(
-                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 25,
                   ),

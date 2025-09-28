@@ -7,14 +7,24 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   Widget build(context) {
     final isDarkmode =
         MediaQuery.of(context).platformBrightness == Brightness.light;
-    return AppBar(
-      backgroundColor: isDarkmode ? Colors.white : Colors.black,
-      actions: [
-        CustomTextButton(title: "Home"),
-        CustomTextButton(title: "About"),
-        CustomTextButton(title: "Projects"),
-        CustomTextButton(title: "Contact"),
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        if (constraints.maxWidth < 600) {
+          return AppBar(
+            backgroundColor: isDarkmode ? Colors.white : Colors.black,
+          );
+        } else {
+          return AppBar(
+            backgroundColor: isDarkmode ? Colors.white : Colors.black,
+            actions: [
+              CustomTextButton(title: "Home"),
+              CustomTextButton(title: "About"),
+              CustomTextButton(title: "Projects"),
+              CustomTextButton(title: "Contact"),
+            ],
+          );
+        }
+      },
     );
   }
 
